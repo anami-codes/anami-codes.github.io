@@ -1,0 +1,16 @@
+---
+layout: landing
+title: Staff
+permalink: /proyects/
+---
+<h1>Staff</h1>
+
+<ul>
+  {% for project in site.projects %}
+    <li>
+      <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+      <h3>{{ project.color }}</h3>
+      <p>{{ project.content | markdownify }}</p>
+    </li>
+  {% endfor %}
+</ul>
